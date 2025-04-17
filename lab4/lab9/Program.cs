@@ -49,6 +49,10 @@ namespace lab9
                     throw new ArgumentException("Invalid zip code format. It should be 5 digits long.");
             }
         }
+        public override string ToString()
+        {
+            return $"My adressa : {_country}, {_city}, {_street}, {_zipCode}";
+        }
 
     }
 
@@ -59,8 +63,7 @@ namespace lab9
             try
             {
                 Adressa address = new Adressa("USA", "New York", "5th Avenue", "10001");
-                Console.WriteLine($"Country: {address.Country}");
-
+                Console.WriteLine(address.ToString());
             }
             catch (Exception ex)
             {
